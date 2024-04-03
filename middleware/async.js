@@ -1,5 +1,5 @@
-const asyncWrapper = (fn) => {
-return async(req, res, next ) =>{
+const asyncWrapper = (fn) => {  // fn is the route handler function
+return async(req, res, next ) =>{  // next is the next middleware function provided by the express stack.
     try{
         await fn(req, res, next)
     }
